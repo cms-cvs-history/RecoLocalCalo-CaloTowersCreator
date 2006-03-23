@@ -1,0 +1,56 @@
+module calotowermaker = CaloTowersCreator {
+   /// Energy threshold for HB cell inclusion [GeV]
+   double HBThreshold = 0.9     // GeV, Scheme B
+   /// Energy threshold for HO cell inclusion [GeV]
+   double HOThreshold = 1.1     // GeV, Scheme B
+   /// Energy threshold for 5-degree (phi) HE cell inclusion [GeV]
+   double HESThreshold = 1.4    // GeV, Scheme B
+   /// Energy threshold for 10-degree (phi) HE cel inclusion [GeV]
+   double HEDThreshold = 1.4    // GeV, Scheme B
+   /// Energy threshold for long-fiber HF readout inclusion [GeV]
+   double HF1Threshold = 0.5    // GeV, ORCA value
+   /// Energy threshold for short-fiber HF readout inclusion [GeV]
+   double HF2Threshold = 0.5    // GeV, ORCA value
+   
+   /// Energy threshold for EB crystal inclusion [GeV]
+   double EBThreshold = 0.09    // GeV, ORCA value w/o selective readout
+   /// Energy threshold for EE crystal inclusion [GeV]
+   double EEThreshold = 0.45    // GeV, ORCA value w/o selective readout
+   
+   /// Energy threshold for EB 5x5 crystal inclusion [GeV]
+   double EBSumThreshold = 0.2  // GeV, Scheme B
+   /// Energy threshold for EE crystals-in-tower inclusion [GeV]
+   double EESumThreshold = 0.45 // GeV, Scheme B
+   
+   /// Global energy threshold on Hcal [GeV]
+   double HcalThreshold = -1000 // GeV, -1000 means cut not used 
+   /// Global energy threshold on tower [GeV]
+   double EcutTower = -1000     // GeV, -1000 means cut not used
+
+   /// Weighting factor for EB   
+   double EBWeight = 1.0        
+   /// Weighting factor for EE   
+   double EEWeight = 1.0        
+   /// Weighting factor for HB   
+   double HBWeight = 1.0        
+   /// Weighting factor for HE 5-degree cells   
+   double HESWeight = 1.0       
+   /// Weighting factor for HE 10-degree cells   
+   double HEDWeight = 1.0       
+   /// Weighting factor for HO 
+   double HOWeight = 1.0       
+   /// Weighting factor for HF long-fiber readouts 
+   double HF1Weight = 1.0
+   /// Weighting factor for HF short-fiber readouts
+   double HF2Weight = 1.0
+   /// HO on/off flag for tower energy reconstruction
+   bool UseHO = true
+   /// Label of HBHERecHitCollection to use
+   string hbheInput = "recohbhe"
+   /// Label of HORecHitCollection to use
+   string hoInput = "recoho"
+   /// Label of HFRecHitCollection to use
+   string hfInput = "recohf"
+   /// Label of EcalRecHitCollections to use
+   vstring ecalInputs = { }
+}
