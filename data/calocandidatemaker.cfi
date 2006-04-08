@@ -1,0 +1,3 @@
+        module calotowercandidate = CaloTowerCandidateCreator {
+            string src = 'towermaker'
+        }
