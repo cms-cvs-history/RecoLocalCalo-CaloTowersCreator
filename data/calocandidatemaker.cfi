@@ -1,3 +1,7 @@
-        module calotowercandidate = CaloTowerCandidateCreator {
-            string src = 'towermaker'
-        }
+module calotowercandidate = CaloTowerCandidateCreator {
+  string src = 'towermaker'
+# Minimum transverse energy for the tower to be converted to a candidate (GeV)
+  double minimumEt = -1
+# Minimum energy for the tower to be converted to a candidate (GeV)
+  double minimumE = -1
+}
