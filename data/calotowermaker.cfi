@@ -46,11 +46,11 @@ module calotowermaker = CaloTowersCreator {
    /// HO on/off flag for tower energy reconstruction
    bool UseHO = true
    /// Label of HBHERecHitCollection to use
-   string hbheInput = "recohbhe"
+   InputTag hbheInput = hbhereco
    /// Label of HORecHitCollection to use
-   string hoInput = "recoho"
+   InputTag hoInput = horeco
    /// Label of HFRecHitCollection to use
-   string hfInput = "recohf"
+   InputTag hfInput = hfreco
    /// Label of EcalRecHitCollections to use
-   vstring ecalInputs = { }
+   VInputTag ecalInputs = { }
 }
