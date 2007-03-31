@@ -1,0 +1,38 @@
+module ct2ct = CaloTowersReCreator {
+
+   // Energy dependent weights and energy scale to be used
+   untracked vdouble EBGrid = {-1.,1.,10.,100.,1000.}
+   untracked vdouble EBWeights = {1.,1.,1.,1.,1.}
+   untracked vdouble EEGrid = {-1.,1.,10.,100.,1000.}
+   untracked vdouble EEWeights = {1.,1.,1.,1.,1.}
+   untracked vdouble HBGrid = {-1.,1.,10.,100.,1000.}
+   untracked vdouble HBWeights = {1.,1.,1.,1.,1.}
+   untracked vdouble HESGrid = {-1.,1.,10.,100.,1000.}
+   untracked vdouble HESWeights = {1.,1.,1.,1.,1.}
+   untracked vdouble HEDGrid = {-1.,1.,10.,100.,1000.}
+   untracked vdouble HEDWeights = {1.,1.,1.,1.,1.}
+   untracked vdouble HOGrid = {-1.,1.,10.,100.,1000.}
+   untracked vdouble HOWeights = {1.,1.,1.,1.,1.}
+   untracked vdouble HF1Grid = {-1.,1.,10.,100.,1000.}
+   untracked vdouble HF1Weights = {1.,1.,1.,1.,1.}
+   untracked vdouble HF2Grid = {-1.,1.,10.,100.,1000.}
+   untracked vdouble HF2Weights = {1.,1.,1.,1.,1.}
+   /// Weighting factor for EB   
+   double EBWeight = 1.0        
+   /// Weighting factor for EE   
+   double EEWeight = 1.0        
+   /// Weighting factor for HB   
+   double HBWeight = 1.0        
+   /// Weighting factor for HE 5-degree cells   
+   double HESWeight = 1.0       
+   /// Weighting factor for HE 10-degree cells   
+   double HEDWeight = 1.0       
+   /// Weighting factor for HO 
+   double HOWeight = 1.0       
+   /// Weighting factor for HF long-fiber readouts 
+   double HF1Weight = 1.0
+   /// Weighting factor for HF short-fiber readouts
+   double HF2Weight = 1.0
+   /// Label of input CaloTowerCollection to use
+   InputTag caloLabel = calotowermaker
+}

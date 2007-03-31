@@ -27,6 +27,23 @@ module calotowermaker = CaloTowersCreator {
    /// Global energy threshold on tower [GeV]
    double EcutTower = -1000     // GeV, -1000 means cut not used
 
+   // Energy dependent weights and energy scale to be used
+   untracked vdouble EBGrid = {-1.,1.,10.,100.,1000.}
+   untracked vdouble EBWeights = {1.,1.,1.,1.,1.}
+   untracked vdouble EEGrid = {-1.,1.,10.,100.,1000.}
+   untracked vdouble EEWeights = {1.,1.,1.,1.,1.}
+   untracked vdouble HBGrid = {-1.,1.,10.,100.,1000.}
+   untracked vdouble HBWeights = {1.,1.,1.,1.,1.}
+   untracked vdouble HESGrid = {-1.,1.,10.,100.,1000.}
+   untracked vdouble HESWeights = {1.,1.,1.,1.,1.}
+   untracked vdouble HEDGrid = {-1.,1.,10.,100.,1000.}
+   untracked vdouble HEDWeights = {1.,1.,1.,1.,1.}
+   untracked vdouble HOGrid = {-1.,1.,10.,100.,1000.}
+   untracked vdouble HOWeights = {1.,1.,1.,1.,1.}
+   untracked vdouble HF1Grid = {-1.,1.,10.,100.,1000.}
+   untracked vdouble HF1Weights = {1.,1.,1.,1.,1.}
+   untracked vdouble HF2Grid = {-1.,1.,10.,100.,1000.}
+   untracked vdouble HF2Weights = {1.,1.,1.,1.,1.}
    /// Weighting factor for EB   
    double EBWeight = 1.0        
    /// Weighting factor for EE   
@@ -52,5 +69,5 @@ module calotowermaker = CaloTowersCreator {
    /// Label of HFRecHitCollection to use
    InputTag hfInput = hfreco
    /// Label of EcalRecHitCollections to use
-   VInputTag ecalInputs = { }
+   VInputTag ecalInputs = { ecalRecHit:EcalRecHitsEB, ecalRecHit:EcalRecHitsEE }
 }
