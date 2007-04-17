@@ -1,5 +1,5 @@
-<use name=RecoLocalCalo/CaloTowersCreator>
-<use name=Geometry/HcalTowerAlgo>
+#<use name=RecoLocalCalo/CaloTowersCreator>
+#<use name=Geometry/HcalTowerAlgo>
 
-<bin file=CaloTowerCreatorTest.cpp></bin>
+#<bin file=CaloTowerCreatorTest.cpp></bin>
 
