@@ -42,7 +42,11 @@ module ct2ct = CaloTowersReCreator {
    untracked double EBEScale = 50.
    untracked double EEEScale = 50.
 
-   // (AA)
+    // (AA)
    /// Method for momentum reconstruction
-   InputTag MomConstrMethod = 0
+   int MomConstrMethod = 0
+   /// Depth, fraction of the respective calorimeter [0,1]
+   double MomEmDepth = 0
+   double MomHadDepth = 0
+   double MomTotDepth = 0
 }
