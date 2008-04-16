@@ -73,9 +73,9 @@ module calotowermaker = CaloTowersCreator {
    
    // (AA)
    /// Method for momentum reconstruction
-   InputTag MomConstrMethod = 0
-   /// Depth, fraction of the respective caorimeter [0,1]
-   InputTag MomEmDepth = 0
-   InputTag MomHadDepth = 0
-   InputTag MomTotDepth = 0
+   int MomConstrMethod = 0
+   /// Depth, fraction of the respective calorimeter [0,1]
+   double MomEmDepth = 0
+   double MomHadDepth = 0
+   double MomTotDepth = 0
 }
