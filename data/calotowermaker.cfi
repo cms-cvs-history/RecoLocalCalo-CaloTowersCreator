@@ -70,12 +70,12 @@ module calotowermaker = CaloTowersCreator {
    InputTag hfInput = hfreco
    /// Label of EcalRecHitCollections to use
    VInputTag ecalInputs = { ecalRecHit:EcalRecHitsEB, ecalRecHit:EcalRecHitsEE }
-   
-   // (AA)
    /// Method for momentum reconstruction
    int MomConstrMethod = 0
    /// Depth, fraction of the respective calorimeter [0,1]
    double MomEmDepth = 0
+   ///
    double MomHadDepth = 0
+   ///
    double MomTotDepth = 0
 }
