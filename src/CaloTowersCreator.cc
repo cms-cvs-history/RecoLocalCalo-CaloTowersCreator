@@ -247,10 +247,10 @@ void CaloTowersCreator::produce(edm::Event& e, const edm::EventSetup& c) {
     process<HBHERecHitCollection>(e, hbheLabel_);
     process<HORecHitCollection>(e, hoLabel_);
     process<HFRecHitCollection>(e, hfLabel_);
-    std::vector<edm::InputTag>::const_iterator i;
-    for (i=ecalLabels_.begin(); i!=ecalLabels_.end(); i++) {
-      process<EcalRecHitCollection>(e, *i);
-    }
+  }
+  std::vector<edm::InputTag>::const_iterator i;
+  for (i=ecalLabels_.begin(); i!=ecalLabels_.end(); i++) {
+    process<EcalRecHitCollection>(e, *i);
   }
 
   // Step B: Create empty output
