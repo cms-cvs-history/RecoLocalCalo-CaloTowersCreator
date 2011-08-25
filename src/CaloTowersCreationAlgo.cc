@@ -381,7 +381,6 @@ void CaloTowersCreationAlgo::assignHit(const CaloRecHit * recHit) {
   getThresholdAndWeight(detId, threshold, weight);
 
   double energy = recHit->energy();  // original RecHit energy is used to apply thresholds  
-std::cout << "ASSIGN " << energy << std::endl;
   double e = energy * weight;        // energies scaled by user weight: used in energy assignments
         
         
@@ -606,7 +605,6 @@ std::cout << "ASSIGN " << energy << std::endl;
 	  tower.numBadHcalCells += 1;
         }
         else if (energy >= threshold) {
-std::cout << "OVER " << std::endl;
           CaloTowerDetId towerDetId = theTowerConstituentsMap->towerOf(detId);
           if (towerDetId.null()) return;
           MetaTower & tower = find(towerDetId);
