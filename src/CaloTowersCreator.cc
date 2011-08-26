@@ -88,9 +88,8 @@ CaloTowersCreator::CaloTowersCreator(const edm::ParameterSet& conf) :
   hbheLabel_(conf.getParameter<edm::InputTag>("hbheInput")),
   hoLabel_(conf.getParameter<edm::InputTag>("hoInput")),
   hfLabel_(conf.getParameter<edm::InputTag>("hfInput")),
-  ecalLabels_(conf.getParameter<std::vector<edm::InputTag> >("ecalInputs")),
   hcalUpgradeLabel_(conf.getParameter<edm::InputTag>("hcalUpgradeInput")),
-  upgrade_(conf.getParameter<bool>("upgrade")),
+  ecalLabels_(conf.getParameter<std::vector<edm::InputTag> >("ecalInputs")),
   allowMissingInputs_(conf.getParameter<bool>("AllowMissingInputs")),
 
   theHcalAcceptSeverityLevel_(conf.getParameter<unsigned int>("HcalAcceptSeverityLevel")),
@@ -106,10 +105,8 @@ CaloTowersCreator::CaloTowersCreator(const edm::ParameterSet& conf) :
   theHcalAcceptSeverityLevelForRejectedHit_(conf.getParameter<unsigned int>("HcalAcceptSeverityLevelForRejectedHit")),
   theEcalAcceptSeverityLevelForRejectedHit_(conf.getParameter<unsigned int>("EcalAcceptSeverityLevelForRejectedHit")),
   useRejectedRecoveredHcalHits_(conf.getParameter<bool>("UseRejectedRecoveredHcalHits")),
-  useRejectedRecoveredEcalHits_(conf.getParameter<bool>("UseRejectedRecoveredEcalHits"))
-
-
-
+  useRejectedRecoveredEcalHits_(conf.getParameter<bool>("UseRejectedRecoveredEcalHits")),
+  upgrade_(conf.getParameter<bool>("upgrade"))
 {
   EBEScale=EScales.EBScale; 
   EEEScale=EScales.EEScale; 
