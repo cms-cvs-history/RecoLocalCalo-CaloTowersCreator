@@ -240,6 +240,8 @@ void CaloTowersCreator::produce(edm::Event& e, const edm::EventSetup& c) {
   // Step A/C: Get Inputs and process (repeatedly)
   if(upgrade_) {
     process<HcalUpgradeRecHitCollection>(e, hcalUpgradeLabel_);
+    process<HORecHitCollection>(e, hoLabel_);
+    process<HFRecHitCollection>(e, hfLabel_);
   } else {
     process<HBHERecHitCollection>(e, hbheLabel_);
     process<HORecHitCollection>(e, hoLabel_);
